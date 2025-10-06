@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda [
+    <!ELEMENT agenda (contacto1)>
+    <!ATTLIST agenda xml:lang CDATA #REQUIRED>
+
+    <!ELEMENT contacto1 (nombre, apellido, empresa, puestoTrabajo, mail, telf, direccion, fechaNacimiento)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT empresa (#PCDATA)>
+    <!ELEMENT puestoTrabajo (#PCDATA)>
+    <!ELEMENT mail (#PCDATA)>
+    <!ELEMENT telf (#PCDATA)>
+
+    <!ELEMENT direccion (pais, calle, ciudad, provincia, codigoPostal)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT codigoPostal (#PCDATA)>
+
+    <!ELEMENT fechaNacimiento (dia, mes, anio)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>
+
+<agenda xml:lang="es">
+    <contacto1>
+        <nombre></nombre>
+        <apellido></apellido>
+        <empresa></empresa>
+        <puestoTrabajo></puestoTrabajo>
+        <mail></mail>
+        <telf></telf>
+
+
+        <direccion>
+            <pais></pais>
+            <calle></calle>
+            <ciudad></ciudad>
+            <provincia></provincia>
+            <codigoPostal></codigoPostal>
+        </direccion>
+
+        <fechaNacimiento>
+            <dia></dia>
+            <mes></mes>
+            <anio></anio>
+        </fechaNacimiento>
+    </contacto1>
+</agenda>

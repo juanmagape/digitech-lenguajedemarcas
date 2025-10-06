@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona [
+    <!ELEMENT persona (nombre, edad, profesion, direccion)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT profesion (#PCDATA)>
+
+    <!ELEMENT direccion (calle, ciudad, codigoPostal)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT codigoPostal (#PCDATA)>
+		<!ATTLIST persona xml:lang CDATA #IMPLIED>
+]>
+
+<persona xml:lang="es">
+    <nombre></nombre>
+    <edad></edad>
+    <profesion></profesion>
+
+    <direccion>
+        <calle></calle>
+        <ciudad></ciudad>
+        <codigoPostal></codigoPostal>
+    </direccion>
+</persona>
