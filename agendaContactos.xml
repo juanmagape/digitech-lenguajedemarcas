@@ -27,26 +27,26 @@
 
 <agenda xml:lang="es">
     <contacto1>
-        <nombre></nombre>
-        <apellido></apellido>
-        <empresa></empresa>
-        <puestoTrabajo></puestoTrabajo>
-        <mail></mail>
-        <telf></telf>
+        <nombre>Lexico</nombre>
+        <apellido>Abe</apellido>
+        <empresa>Digitech</empresa>
+        <puestoTrabajo>Estudiante</puestoTrabajo>
+        <mail>teralex142@gmail.com</mail>
+        <telf>+34 123456789</telf>
 
 
         <direccion>
-            <pais></pais>
-            <calle></calle>
-            <ciudad></ciudad>
-            <provincia></provincia>
-            <codigoPostal></codigoPostal>
+            <pais>España</pais>
+            <calle>Diputació</calle>
+            <ciudad>Barcelona</ciudad>
+            <provincia>Barcelona</provincia>
+            <codigoPostal>08015</codigoPostal>
         </direccion>
 
         <fechaNacimiento>
-            <dia></dia>
-            <mes></mes>
-            <anio></anio>
+            <dia>24</dia>
+            <mes>2</mes>
+            <anio>2007</anio>
         </fechaNacimiento>
     </contacto1>
 </agenda>
