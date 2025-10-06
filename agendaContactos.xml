@@ -1,52 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE agenda [
-    <!ELEMENT agenda (contacto1)>
+    <!ELEMENT agenda (contacto+)>
     <!ATTLIST agenda xml:lang CDATA #REQUIRED>
 
-    <!ELEMENT contacto1 (nombre, apellido, empresa, puestoTrabajo, mail, telf, direccion, fechaNacimiento)>
+    <!ELEMENT contacto (nombre, email+, telefono*, direccion?, organizacion?, notas?)>
+    <!ATTLIST contacto id ID #REQUIRED>
 
     <!ELEMENT nombre (#PCDATA)>
-    <!ELEMENT apellido (#PCDATA)>
-    <!ELEMENT empresa (#PCDATA)>
-    <!ELEMENT puestoTrabajo (#PCDATA)>
-    <!ELEMENT mail (#PCDATA)>
-    <!ELEMENT telf (#PCDATA)>
 
-    <!ELEMENT direccion (pais, calle, ciudad, provincia, codigoPostal)>
+    <!ELEMENT email (#PCDATA)>
+    <!ATTLIST email tipo (work | home | other) #REQUIRED
+                     principal (yes | no) "no">
+
+    <!ELEMENT telefono (#PCDATA)>
+
+    <!ELEMENT direccion (pais, ciudad, calle?, provincia?, codigo_postal?)>
     <!ELEMENT pais (#PCDATA)>
-    <!ELEMENT calle (#PCDATA)>
     <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT calle (#PCDATA)>
     <!ELEMENT provincia (#PCDATA)>
-    <!ELEMENT codigoPostal (#PCDATA)>
+    <!ELEMENT codigo_postal (#PCDATA)>
 
-    <!ELEMENT fechaNacimiento (dia, mes, anio)>
-    <!ELEMENT dia (#PCDATA)>
-    <!ELEMENT mes (#PCDATA)>
-    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT organizacion (#PCDATA)>
+    <!ELEMENT notas (#PCDATA)>
 ]>
 
 <agenda xml:lang="es">
-    <contacto1>
-        <nombre>Lexico</nombre>
-        <apellido>Abe</apellido>
-        <empresa>Digitech</empresa>
-        <puestoTrabajo>Estudiante</puestoTrabajo>
-        <mail>teralex142@gmail.com</mail>
-        <telf>+34 123456789</telf>
 
-
+    <contacto id="c1">
+        <nombre>Lexico Abe</nombre>
+        <email tipo="home" principal="yes">teralex142@gmail.com</email>
+        <email tipo="other">lexico@outlook.com</email>
+        <telefono>+34 123456789</telefono>
         <direccion>
             <pais>España</pais>
-            <calle>Diputació</calle>
             <ciudad>Barcelona</ciudad>
+            <calle>Diputacio 12</calle>
             <provincia>Barcelona</provincia>
-            <codigoPostal>08015</codigoPostal>
+            <codigo_postal>08015</codigo_postal>
         </direccion>
+        <organizacion>Digitech</organizacion>
+        <notas>Contacto principal para proyectos de investigación.</notas>
+    </contacto>
 
-        <fechaNacimiento>
-            <dia>24</dia>
-            <mes>2</mes>
-            <anio>2007</anio>
-        </fechaNacimiento>
-    </contacto1>
+    <contacto id="c2">
+        <nombre>María López</nombre>
+        <email tipo="work" principal="yes">maria.lopez@empresa.com</email>
+        <telefono>+34 654321987</telefono>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Valencia</ciudad>
+            <codigo_postal>46001</codigo_postal>
+        </direccion>
+        <organizacion>SoftServe</organizacion>
+    </contacto>
+
+    <contacto id="c3">
+        <nombre>Joan Martínez</nombre>
+        <email tipo="home">joan.m@gmail.com</email>
+        <email tipo="work" principal="yes">j.martinez@datahub.es</email>
+        <telefono>+34 935123456</telefono>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Girona</ciudad>
+        </direccion>
+        <notas>Antiguo compañero de trabajo.</notas>
+    </contacto>
+
+    <contacto id="c4">
+        <nombre>Laura Sánchez</nombre>
+        <email tipo="home" principal="yes">laura.san@gmail.com</email>
+    </contacto>
+
+    <contacto id="c5">
+        <nombre>Pedro Ruiz</nombre>
+        <email tipo="work">p.ruiz@phoenixtech.es</email>
+        <telefono>+34 987654321</telefono>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+        <organizacion>PhoenixTech</organizacion>
+    </contacto>
+
+    <contacto id="c6">
+        <nombre>Clara Gómez</nombre>
+        <email tipo="home" principal="yes">clarag@icloud.com</email>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Valencia</ciudad>
+            <codigo_postal>46001</codigo_postal>
+        </direccion>
+        <notas>Contacto personal.</notas>
+    </contacto>
+
+    <contacto id="c7">
+        <nombre>Jordi Ferrer</nombre>
+        <email tipo="work">jferrer@empresa.cat</email>
+        <email tipo="other">jordi.f@gmail.com</email>
+        <telefono>+34 600100200</telefono>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Tarragona</ciudad>
+        </direccion>
+    </contacto>
+
+    <contacto id="c8">
+        <nombre>Lucía Torres</nombre>
+        <email tipo="home" principal="yes">lucia.torres@gmail.com</email>
+        <telefono>+34 931223344</telefono>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Valencia</ciudad>
+            <codigo_postal>46001</codigo_postal>
+        </direccion>
+    </contacto>
+
+    <contacto id="c9">
+        <nombre>Raúl García</nombre>
+        <email tipo="work" principal="yes">raul@devops.cat</email>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Valencia</ciudad>
+            <codigo_postal>46001</codigo_postal>
+        </direccion>
+    </contacto>
+
+    <contacto id="c10">
+        <nombre>Sara Puig</nombre>
+        <email tipo="home" principal="yes">sara.puig@hotmail.com</email>
+        <direccion>
+            <pais>España</pais>
+            <ciudad>Valencia</ciudad>
+            <codigo_postal>46001</codigo_postal>
+        </direccion>
+        <notas>Amiga de la universidad.</notas>
+    </contacto>
+
 </agenda>
